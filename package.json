@@ -3,13 +3,14 @@
   "version": "3.7.4",
   "description": "Build NW.js desktop applications for Mac, Windows and Linux.",
   "keywords": [
+    "NW",
     "NW.js",
     "Desktop",
     "Application"
   ],
   "author": "Steffen Müller <steffen@mllrsohn.com>",
   "license": "MIT",
-  "main": "lib/index.cjs",
+  "main": "src/index.js",
   "type": "module",
   "homepage": "https://github.com/nwutils/nw-builder",
   "repository": {
@@ -17,53 +18,18 @@
     "url": "https://github.com/nwutils/nw-builder.git"
   },
   "scripts": {
-    "format": "prettier --write ./bin ./lib ./src ./test",
-    "lint": "eslint ./bin/**.cjs ./lib/**.cjs ./src/**.js ./test/**.cjs ",
-    "test": "pnpm test:unit && tape './test/*.cjs'",
-    "test:unit": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
-    "demo": "cd ./test/demo && pnpm start",
-    "build": "esbuild src/index.js --bundle --minify --platform=node --outfile=./dist/index.cjs"
-  },
-  "devDependencies": {
-    "decompress-zip": "0.3.3",
-    "eol": "0.9.1",
-    "esbuild": "0.14.42",
-    "eslint": "8.16.0",
-    "eslint-plugin-jsdoc": "^39.3.2",
-    "jest": "28.1.0",
-    "jest-environment-jsdom": "28.1.0",
-    "jsdom": "19.0.0",
-    "nock": "13.2.4",
-    "pnpm": "7.1.7",
-    "prettier": "2.6.2",
-    "redtape": "1.0.0",
-    "tape": "5.5.3"
+    "format": "prettier ./src"
   },
   "dependencies": {
-    "archiver": "5.3.1",
-    "deprecate": "1.1.1",
-    "extract-zip": "2.0.1",
-    "graceful-fs-extra": "2.0.0",
-    "graceful-ncp": "3.0.0",
-    "inherits": "2.0.4",
-    "lodash": "4.17.21",
-    "plist": "3.0.5",
-    "progress": "2.0.3",
-    "rcedit": "3.0.1",
-    "recursive-readdir-sync": "1.0.6",
-    "request": "2.88.2",
-    "rimraf": "3.0.2",
-    "semver": "7.3.7",
-    "simple-glob": "0.2.0",
-    "tar-fs": "2.1.1",
-    "temp": "github:adam-lynch/node-temp#remove_tmpdir_dep",
-    "thenify": "3.3.1",
-    "update-notifier": "5.1.0",
-    "winresourcer": "0.9.0",
     "yargs": "17.5.1"
   },
+  "devDependencies": {
+    "eslint": "8.17.0",
+    "eslint-plugin-jsdoc": "39.3.2",
+    "prettier": "2.6.2"
+  },
   "bin": {
-    "nwbuild": "./bin/nwbuild.cjs"
+    "nwbuild": "./bin/index.js"
   },
   "prettier": {
     "printWidth": 80,
@@ -100,7 +66,4 @@
       "jsdoc"
     ]
   },
-  "jest": {
-    "testEnvironment": "jsdom"
-  }
 }

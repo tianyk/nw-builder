@@ -3,15 +3,3 @@
 
 # runtime files
 node_modules
-
-# project files
-build
-cache
-
-yarn.lock
-package-lock.json
-
-npm-debug.log
-.pnpm-debug.log
-yarn-debug.log*
-yarn-error.log

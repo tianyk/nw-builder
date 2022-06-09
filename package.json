@@ -18,7 +18,9 @@
     "url": "https://github.com/nwutils/nw-builder.git"
   },
   "scripts": {
-    "format": "prettier ./src"
+    "format": "prettier --write ./bin ./src ./test",
+    "lint": "eslint ./bin ./src ./test",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
   },
   "dependencies": {
     "yargs": "17.5.1"
@@ -26,6 +28,9 @@
   "devDependencies": {
     "eslint": "8.17.0",
     "eslint-plugin-jsdoc": "39.3.2",
+    "jest": "28.1.1",
+    "jest-environment-jsdom": "28.1.1",
+    "jsdom": "19.0.0",
     "prettier": "2.6.2"
   },
   "bin": {
@@ -55,7 +60,8 @@
     },
     "env": {
       "es6": true,
-      "node": true
+      "node": true,
+      "jest": true
     },
     "overrides": [
       {
@@ -66,4 +72,7 @@
       "jsdoc"
     ]
   },
+  "jest": {
+    "testEnvironment": "jsdom"
+  }
 }

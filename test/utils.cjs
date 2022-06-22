@@ -1,6 +1,6 @@
 var test = require("tape");
 var testSetup = require("redtape");
-var temp = require("temp");
+var temp = require("@tianyk/temp");
 var fs = require("fs");
 var path = require("path");
 var utils = require("../lib/utils.cjs");

@@ -1,6 +1,6 @@
 var test = require("tape"),
   nock = require("nock"),
-  temp = require("temp"),
+  temp = require("@tianyk/temp"),
   path = require("path"),
   fs = require("fs");
 

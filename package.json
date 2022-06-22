@@ -1,13 +1,12 @@
 {
   "name": "@tianyk/nw-builder",
-  "version": "3.7.4-beta.1",
+  "version": "3.7.4",
   "description": "Build NW.js desktop applications for Mac, Windows and Linux.",
   "keywords": [
     "NW.js",
     "Desktop",
     "Application"
   ],
-  "author": "Steffen Müller <steffen@mllrsohn.com>",
   "license": "MIT",
   "main": "lib/index.cjs",
   "type": "module",
